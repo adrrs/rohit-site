@@ -1,0 +1,35 @@
+---
+// src/pages/thoughts/index.astro
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('thoughts'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Thoughts">
+
+  <h1>Thoughts</h1>
+  <p class="section-intro">
+    Writing on research, methods, academia, and the occasional non-finance topic.
+    Roughly in the spirit of public thinking-out-loud.
+    <a href="/rss.xml" style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); margin-left: 8px;">RSS ↗</a>
+  </p>
+
+  {posts.length === 0 && (
+    <p style="color: var(--text-muted); font-style: italic;">No posts yet — check back soon.</p>
+  )}
+
+  {posts.map(post => (
+    <a href={`/thoughts/${post.slug}`} class="thought-item">
+      <div class="thought-date">
+        {post.data.date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}
+      </div>
+      <div class="thought-title">{post.data.title}</div>
+      {post.data.excerpt && (
+        <div class="thought-excerpt">{post.data.excerpt}</div>
+      )}
+      <div class="read-more">Read →</div>
+    </a>
+  ))}
+
+</Base>

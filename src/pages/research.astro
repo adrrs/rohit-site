@@ -1,0 +1,141 @@
+---
+// src/pages/research.astro
+import Base from '../layouts/Base.astro';
+---
+<Base title="Research">
+
+  <h1>Research</h1>
+  <p class="section-intro">
+    My work focuses on corporate payout policy, executive compensation, and board governance —
+    with an empirical, identification-first approach.
+  </p>
+
+  <h2>Works in Progress</h2>
+
+  <div class="wip-item">
+    <div class="wip-title">
+      Heterogeneous Effects of Mandatory Disclosure: Governance and Power in Compensation Restructuring
+    </div>
+    <div class="wip-status">Working Paper</div>
+    <div class="mini-abstract" id="abs1">
+      We examine how governance quality and CEO power shape compensation restructuring surrounding
+      FAS 123R's mandatory option expensing. Decomposing responses across timing, magnitude, quality,
+      and policy consequences, we document systematic heterogeneity. Strong governance predicts earlier
+      adjustment and efficient substitution patterns maintaining incentive alignment. CEO power exhibits
+      opposing effects concentrated in the mandatory compliance period: delayed adjustment and rent
+      extraction through non-option compensation increases unrelated to option intensity changes.
+      Causal mediation analysis reveals these restructuring differences transmit to corporate financing
+      policies. Exploiting predetermined governance measures, we provide evidence that both optimal
+      contracting and rent extraction mechanisms operate simultaneously.
+    </div>
+    <button class="abstract-toggle" onclick="toggleAbstract('abs1', this)">+ abstract</button>
+    <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted); margin-left: 12px;">
+      <a href="mailto:rohit@sonika.me?subject=Request for Paper: Governance and Compensation Restructuring" style="color: var(--accent);">email for draft</a>
+    </span>
+  </div>
+
+  <div class="wip-item">
+    <div class="wip-title">
+      Credit Market Spillovers, Corporate Payout Policy and Investment Efficiency:
+      Evidence from Private Equity Fund Financing Constraints
+    </div>
+    <div class="wip-status">Work in progress</div>
+    <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">
+      <a href="mailto:rohit@sonika.me?subject=Request for Paper: PE Fund Financing and Payout Policy" style="color: var(--accent);">email for draft</a>
+    </span>
+  </div>
+
+  <div class="wip-item">
+    <div class="wip-title">
+      Monitoring in the Shadows: Board Independence and the Opacity of Related-Party Transactions
+    </div>
+    <div class="wip-status">Work in progress</div>
+    <span style="font-size: 11px; font-family: var(--font-mono); color: var(--text-muted);">
+      <a href="mailto:rohit@sonika.me?subject=Request for Paper: Board Independence and Related-Party Transactions" style="color: var(--accent);">email for draft</a>
+    </span>
+  </div>
+
+  <h2>Publications</h2>
+
+  <div class="pub-item">
+    <a class="pub-title" href="https://doi.org/10.1016/j.jbankfin.2024.107288" target="_blank">
+      The timing of stock repurchases: Do well-connected CEOs help or harm?
+    </a>
+    <div class="pub-authors">with Amedeo D. Cesari, Nicoletta Marinelli</div>
+    <div class="pub-journal">
+      Journal of Banking &amp; Finance, 2024, 168:107288
+      <span class="journal-badge">JBF</span>
+    </div>
+  </div>
+
+  <div class="pub-item">
+    <a class="pub-title" href="https://dx.doi.org/10.1111/eufm.12359" target="_blank">
+      Flexibility in Share Repurchases — Evidence from UK
+    </a>
+    <div class="pub-authors">with Manoj Kulchania</div>
+    <div class="pub-journal">
+      European Financial Management, 2023, 29, 196–246
+      <span class="journal-badge">EFM</span>
+    </div>
+  </div>
+
+  <div class="pub-item">
+    <a class="pub-title" href="https://dx.doi.org/10.1016/j.jbankfin.2020.105800" target="_blank">
+      Buyback behaviour and the option funding hypothesis
+    </a>
+    <div class="pub-authors">with Mark B. Shackleton</div>
+    <div class="pub-journal">
+      Journal of Banking &amp; Finance, 2020, 114:105800
+      <span class="journal-badge">JBF</span>
+    </div>
+  </div>
+
+  <div class="pub-item">
+    <a class="pub-title" href="https://dx.doi.org/10.1111/fima.12054" target="_blank">
+      The Option and Decision to Repurchase Stock
+    </a>
+    <div class="pub-authors">with Mark B. Shackleton, Nicholas Carline</div>
+    <div class="pub-journal">
+      Financial Management, 2014, 41(4), 833–855
+      <span class="journal-badge">FM</span>
+    </div>
+  </div>
+
+  <h2>Grants &amp; Awards</h2>
+
+  <div class="grant-item"><div class="grant-year">2018</div><div class="grant-name">HSE Foundation Grant</div></div>
+  <div class="grant-item"><div class="grant-year">2017</div><div class="grant-name">Pörssisäätiö Research Grant</div></div>
+  <div class="grant-item"><div class="grant-year">2017</div><div class="grant-name">Suomen Arvopaperimarkkinoiden Edistämissäätiö Research Grant</div></div>
+  <div class="grant-item"><div class="grant-year">2017</div><div class="grant-name">Exeter Research Grant</div></div>
+  <div class="grant-item"><div class="grant-year">2016</div><div class="grant-name">Royal Economic Society Conference Grant</div></div>
+  <div class="grant-item"><div class="grant-year">2016</div><div class="grant-name">Hanken Commerce and Industry Fund Grant</div></div>
+  <div class="grant-item"><div class="grant-year">2015</div><div class="grant-name">Exeter International Outward Mobility Grant</div></div>
+  <div class="grant-item"><div class="grant-year">2012</div><div class="grant-name">American Finance Association Travel Grant</div></div>
+  <div class="grant-item" style="border-bottom: none;"><div class="grant-year">2009</div><div class="grant-name">Lancaster University Management School Fellowship</div></div>
+
+  <h2>Conferences &amp; Seminars</h2>
+
+  <div class="year-row"><span class="year-label">2025</span><span>IESEG · UAB · EM Lyon · Catholica · IIM Ahmedabad · St. Andrews</span></div>
+  <div class="year-row"><span class="year-label">2024</span><span>Helsinki · SKK-GSB</span></div>
+  <div class="year-row"><span class="year-label">2017</span><span>Minho · Aalto · Aarhus</span></div>
+  <div class="year-row"><span class="year-label">2016</span><span>FMA Helsinki · Brunel · Edinburgh · FMA Las Vegas · IFC (IIM-A)</span></div>
+  <div class="year-row"><span class="year-label">2015</span><span>Finance Forum Madrid · Lancaster · Hanken · Cardiff · Manchester</span></div>
+  <div class="year-row"><span class="year-label">2014</span><span>Glasgow · Edinburgh · Strathclyde · Exeter</span></div>
+  <div class="year-row"><span class="year-label">2013</span><span>Exeter · Reading · Bath · EFMA Reading · Lancaster · Birmingham</span></div>
+  <div class="year-row"><span class="year-label">2012</span><span>Cass · MFA New Orleans · Lancaster · EFA Copenhagen · FMA Atlanta</span></div>
+  <div class="year-row"><span class="year-label">2011</span><span>Lancaster · Cambridge · Birmingham</span></div>
+
+</Base>
+
+<script>
+function toggleAbstract(id, btn) {
+  const el = document.getElementById(id);
+  if (el.style.display === 'block') {
+    el.style.display = 'none';
+    btn.textContent = '+ abstract';
+  } else {
+    el.style.display = 'block';
+    btn.textContent = '− abstract';
+  }
+}
+</script>

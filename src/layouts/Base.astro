@@ -1,0 +1,89 @@
+---
+// src/layouts/Base.astro
+// Shared layout used by every page.
+// Usage: <Base title="Page Title"> ... </Base>
+
+import '../styles/global.css';
+
+const { title = "Rohit Sonika" } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+function isActive(path: string): boolean {
+  if (path === '/') return currentPath === '/';
+  return currentPath.startsWith(path);
+}
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title === "Rohit Sonika" ? title : `${title} — Rohit Sonika`}</title>
+  <meta name="description" content="Rohit Sonika — Finance researcher at Hanken School of Economics, Helsinki. Research in corporate payout policy, executive compensation, and governance." />
+  <link rel="canonical" href={`https://rohit.sonika.me${currentPath}`} />
+  <link rel="alternate" type="application/rss+xml" title="Rohit Sonika — Thoughts" href="/rss.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="site-identity">
+      <div class="avatar-ring">RS</div>
+      <div class="site-name">Rohit Sonika</div>
+      <div class="site-role">Finance · Hanken</div>
+    </div>
+
+    <nav>
+      <div class="nav-section">
+        <div class="nav-label">Pages</div>
+        <a href="/" class={`nav-link ${isActive('/') ? 'active' : ''}`}>
+          <span class="nav-dot"></span>Home
+        </a>
+        <a href="/about" class={`nav-link ${isActive('/about') ? 'active' : ''}`}>
+          <span class="nav-dot"></span>About
+        </a>
+        <a href="/research" class={`nav-link ${isActive('/research') ? 'active' : ''}`}>
+          <span class="nav-dot"></span>Research
+        </a>
+        <a href="/cv" class={`nav-link ${isActive('/cv') ? 'active' : ''}`}>
+          <span class="nav-dot"></span>CV
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Writing</div>
+        <a href="/thoughts" class={`nav-link ${isActive('/thoughts') ? 'active' : ''}`}>
+          <span class="nav-dot"></span>Thoughts
+        </a>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-label">Connect</div>
+        <a href="/contact" class={`nav-link ${isActive('/contact') ? 'active' : ''}`}>
+          <span class="nav-dot"></span>Contact
+        </a>
+        <a href="https://scholar.google.com/citations?user=3M0PdFIAAAAJ&hl=en" target="_blank" class="nav-link">
+          Scholar ↗
+        </a>
+        <a href="https://www.linkedin.com/in/rohitsonika/" target="_blank" class="nav-link">
+          LinkedIn ↗
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        Open to opportunities
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <slot />
+  </main>
+
+</body>
+</html>

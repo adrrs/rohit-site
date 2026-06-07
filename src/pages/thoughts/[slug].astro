@@ -1,0 +1,31 @@
+---
+// src/pages/thoughts/[slug].astro
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('thoughts');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+<Base title={post.data.title}>
+
+  <a href="/thoughts" class="post-back">← all thoughts</a>
+
+  <div class="thought-date">
+    {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+  </div>
+
+  <h1>{post.data.title}</h1>
+
+  <div class="post-body">
+    <Content />
+  </div>
+
+</Base>
