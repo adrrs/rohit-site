@@ -11,6 +11,7 @@ const thoughts = defineCollection({
     title: z.string(),
     date: z.date(),
     excerpt: z.string().optional(),
+    draft: z.boolean().optional(),
   }),
 });
 

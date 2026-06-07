@@ -1,7 +1,8 @@
 ---
-title: "On the Wallenberg Grant and what it means for my research agenda"
+title: "On the Wahlroos Grant and what it means for my research agenda"
 date: 2025-03-15
 excerpt: "Earlier this year I received a significant grant from the Wallenberg Foundation. Here's what I'm planning to do with it and why."
+draft: true
 ---
 
 Earlier this year I received a significant grant from the Wallenberg Foundation. It is the kind of thing that warrants a proper explanation — not just a LinkedIn announcement — because the questions it funds are ones I have been circling for a while.

@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('thoughts');
 const recentPosts = allPosts
+  .filter((p: { data: { draft?: boolean } }) => !p.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 2);
 ---
@@ -14,8 +15,8 @@ const recentPosts = allPosts
   <p class="lede">Finance researcher, data strategist, and occasional writer based in Helsinki.</p>
 
   <p>
-    I study corporate finance — how companies return cash to shareholders, how executives
-    are paid, and how governance shapes those decisions. I work as an Associate Researcher
+    I study corporate finance — how corporate and legislative governance dictate corporate 
+    decision-making. I work as the Saara and Björn Wahlroos Foundation Fellow
     at <strong>Hanken School of Economics</strong>.
   </p>
 
