@@ -29,7 +29,7 @@ const recentPosts = allPosts
   <h2>Recent Thoughts</h2>
 
   {recentPosts.map(post => (
-    <a href={`/thoughts/${post.slug}`} class="thought-item">
+    <a href={`/thoughts/${post.id}`} class="thought-item">
       <div class="thought-date">
         {post.data.date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}
       </div>

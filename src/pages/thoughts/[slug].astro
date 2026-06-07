@@ -1,18 +1,18 @@
 ---
 // src/pages/thoughts/[slug].astro
 import Base from '../../layouts/Base.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('thoughts');
   return posts.filter((p: { data: { draft?: boolean } }) => !p.data.draft).map(post => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 <Base title={post.data.title}>
 

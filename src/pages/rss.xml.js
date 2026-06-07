@@ -7,7 +7,9 @@ import { getCollection } from 'astro:content';
 
 export async function GET(context) {
   const posts = await getCollection('thoughts');
-  const sorted = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  const sorted = posts
+    .filter(p => !p.data.draft)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
   return rss({
     title: 'Rohit Sonika — Thoughts',
@@ -17,7 +19,7 @@ export async function GET(context) {
       title: post.data.title,
       pubDate: post.data.date,
       description: post.data.excerpt ?? '',
-      link: `/thoughts/${post.slug}/`,
+      link: `/thoughts/${post.id}/`,
     })),
   });
 }
