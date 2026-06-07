@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "CLAUDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "CLAUDE"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.5
+    "width": 265.5
   },
   "right": {
     "id": "8ed9418c6585ada3",
@@ -185,6 +185,7 @@
   },
   "active": "58cf84ef6272f97a",
   "lastOpenFiles": [
+    "README.md",
     "src/content/thoughts/welcome.md",
     "CLAUDE.md",
     "Rohit Site/README.md",
