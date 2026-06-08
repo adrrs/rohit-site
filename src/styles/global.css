@@ -59,7 +59,7 @@ body {
   color: var(--text-primary);
   min-height: 100vh;
   display: flex;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -112,7 +112,7 @@ hr.divider {
 }
 
 .site-name {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 17px;
   color: var(--sidebar-text);
   line-height: 1.3;
@@ -135,11 +135,11 @@ hr.divider {
 }
 
 .nav-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   font-family: var(--font-mono);
   color: var(--sidebar-muted);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
@@ -226,36 +226,36 @@ hr.divider {
 
 h1 {
   font-family: var(--font-serif);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 h2 {
   font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 400;
   color: var(--text-primary);
-  margin-top: 44px;
+  margin-top: 48px;
   margin-bottom: 16px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
 
 h3 {
-  font-size: 13px;
+  font-family: var(--font-sans);
+  font-size: 11px;
   font-weight: 600;
   color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   margin-bottom: 16px;
-  font-family: var(--font-sans);
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
   color: var(--text-secondary);
   margin-bottom: 16px;
@@ -263,15 +263,15 @@ p {
 
 .lede {
   font-family: var(--font-serif);
-  font-size: 19px;
-  line-height: 1.55;
+  font-size: 20px;
+  line-height: 1.5;
   color: var(--text-primary);
   margin-bottom: 24px;
   font-style: italic;
 }
 
 .section-intro {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 24px;
@@ -357,7 +357,7 @@ p {
 
 .pub-title {
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: 17px;
   color: var(--text-primary);
   line-height: 1.4;
   margin-bottom: 5px;
@@ -371,7 +371,7 @@ p {
 }
 
 .pub-authors {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 4px;
 }
@@ -463,7 +463,7 @@ p {
 }
 
 .thought-date {
-  font-size: 11.5px;
+  font-size: 12px;
   font-family: var(--font-mono);
   color: var(--text-muted);
   margin-bottom: 8px;
@@ -471,7 +471,7 @@ p {
 
 .thought-title {
   font-family: var(--font-serif);
-  font-size: 17px;
+  font-size: 20px;
   color: var(--text-primary);
   line-height: 1.3;
   margin-bottom: 8px;
@@ -480,7 +480,7 @@ p {
 }
 
 .thought-excerpt {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 10px;
@@ -555,7 +555,7 @@ p {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 14px 16px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.4;
 }
@@ -591,26 +591,26 @@ p {
 
 .cv-years {
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--text-muted);
   padding-top: 2px;
 }
 
 .cv-role {
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--text-primary);
   font-weight: 500;
   margin-bottom: 3px;
 }
 
 .cv-org {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 2px;
 }
 
 .cv-note {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
   font-style: italic;
 }
