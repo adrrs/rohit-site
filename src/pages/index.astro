@@ -1,13 +1,13 @@
 ---
 // src/pages/index.astro
 import Base from '../layouts/Base.astro';
-import { getCollection } from 'astro:content';
+// import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection('thoughts');
-const recentPosts = allPosts
-  .filter((p: { data: { draft?: boolean } }) => !p.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 2);
+// const allPosts = await getCollection('thoughts');
+// const recentPosts = allPosts
+//   .filter((p: { data: { draft?: boolean } }) => !p.data.draft)
+//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+//   .slice(0, 2);
 ---
 <Base title="Rohit Sonika">
 
@@ -26,7 +26,7 @@ const recentPosts = allPosts
     <a href="mailto:rohit@sonika.me" class="btn btn-ghost">Email</a>
   </div>
 
-  <h2>Recent Thoughts</h2>
+  <!-- <h2>Recent Thoughts</h2>
 
   {recentPosts.map(post => (
     <a href={`/thoughts/${post.id}`} class="thought-item">
@@ -39,7 +39,7 @@ const recentPosts = allPosts
       )}
       <div class="read-more">Read →</div>
     </a>
-  ))}
+  ))} -->
 
   <h2>Research Interests</h2>
 
