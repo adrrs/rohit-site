@@ -1,95 +1,156 @@
 ---
 // src/pages/index.astro
-import Base from '../layouts/Base.astro';
-// import { getCollection } from 'astro:content';
-
-// const allPosts = await getCollection('thoughts');
-// const recentPosts = allPosts
-//   .filter((p: { data: { draft?: boolean } }) => !p.data.draft)
-//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-//   .slice(0, 2);
+// Single-page test layout: plain black on white, no sidebar.
+import '../styles/simple.css';
 ---
-<Base title="Rohit Sonika">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohit Sonika</title>
+  <meta name="description" content="Rohit Sonika — Finance researcher at Hanken School of Economics, Helsinki. Research in corporate payout policy, executive compensation, and governance." />
+  <link rel="canonical" href="https://rohit.sonika.me/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script async data-id="101465814" src="//static.getclicky.com/js"></script>
+</head>
+<body>
 
-  <h1>Hey, I'm Rohit.</h1>
-  <p class="lede">Finance researcher, data strategist, and occasional writer based in Helsinki.</p>
+  <nav class="side-nav">
+    <a href="#top">Rohit Sonika</a>
+    <a href="#research">Research Interests</a>
+    <a href="#publications">Publications</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+  <h1 id="top">Rohit Sonika</h1>
+  <p class="lede">Finance researcher and data strategist</p>
 
   <p>
-    I study corporate finance — how corporate and legislative governance dictate executive 
-    decision-making. I work as the Saara and Björn Wahlroos Foundation Fellow
-    at <strong>Hanken School of Economics</strong> in Helsinki, Finland.
+    I work as the Saara and Björn Wahlroos Foundation Fellow at
+    <strong>Hanken School of Economics</strong> in Helsinki, Finland.
+    I study topics in corporate finance — how corporate and legislative 
+    governance dictate executive decision-making.
   </p>
 
-  <div class="hero-links">
-    <a href="/research" class="btn btn-primary">Research</a>
-    <a href="/about" class="btn btn-ghost">About me</a>
-    <a href="mailto:rohit@sonika.me" class="btn btn-ghost">Email</a>
+  <div class="links">
+    <a href="mailto:rohit@sonika.me">rohit@sonika.me</a>
+    <a href="https://scholar.google.com/citations?user=3M0PdFIAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <a href="https://www.linkedin.com/in/rohitsonika/" target="_blank">LinkedIn</a>
+    <a href="https://orcid.org/0009-0005-8916-8591" target="_blank">ORCID</a>
   </div>
 
-  <!-- <h2>Recent Thoughts</h2>
-
-  {recentPosts.map(post => (
-    <a href={`/thoughts/${post.id}`} class="thought-item">
-      <div class="thought-date">
-        {post.data.date.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })}
-      </div>
-      <div class="thought-title">{post.data.title}</div>
-      {post.data.excerpt && (
-        <div class="thought-excerpt">{post.data.excerpt}</div>
-      )}
-      <div class="read-more">Read →</div>
-    </a>
-  ))} -->
-
-  <h2>Research Interests</h2>
-
-  <div class="interests-grid">
-    <div class="interest-card">
+  <h2 id="research">Research Interests</h2>
+  <ul class="interest-list">
+    <li>
       <strong>Payout Policy</strong>
-      Buybacks, dividends, and what firms signal through capital returns
-    </div>
-    <div class="interest-card">
+      <span>Buybacks, dividends, and what firms signal through capital returns</span>
+    </li>
+    <li>
       <strong>Executive Compensation</strong>
-      Option grants, FAS 123R, rent extraction vs optimal contracting
-    </div>
-    <div class="interest-card">
+      <span>Option grants, FAS 123R, rent extraction vs optimal contracting</span>
+    </li>
+    <li>
       <strong>Insider Trading</strong>
-      CEO networks, information asymmetry, and market timing
-    </div>
-    <div class="interest-card">
+      <span>CEO networks, information asymmetry, and market timing</span>
+    </li>
+    <li>
       <strong>Board Governance</strong>
-      Independence, related-party transactions, monitoring quality
-    </div>
-  </div>
+      <span>Independence, related-party transactions, monitoring quality</span>
+    </li>
+  </ul>
 
-  <h2>Selected Publications</h2>
+  <h2 id="publications">Publications</h2>
 
-  <div class="pub-item">
+  <div class="pub">
     <a class="pub-title" href="https://doi.org/10.1016/j.jbankfin.2024.107288" target="_blank">
       The timing of stock repurchases: Do well-connected CEOs help or harm?
     </a>
-    <div class="pub-authors">with Amedeo D. Cesari, Nicoletta Marinelli</div>
-    <div class="pub-journal">
-      Journal of Banking &amp; Finance, 2024, 168:107288
-      <span class="journal-badge">JBF</span>
-    </div>
+    <div class="pub-meta">with Amedeo D. Cesari, Nicoletta Marinelli · Journal of Banking &amp; Finance, 2024, 168:107288</div>
   </div>
 
-  <div class="pub-item">
+  <div class="pub">
+    <a class="pub-title" href="https://dx.doi.org/10.1111/eufm.12359" target="_blank">
+      Flexibility in Share Repurchases — Evidence from UK
+    </a>
+    <div class="pub-meta">with Manoj Kulchania · European Financial Management, 2023, 29, 196–246</div>
+  </div>
+
+  <div class="pub">
     <a class="pub-title" href="https://dx.doi.org/10.1016/j.jbankfin.2020.105800" target="_blank">
       Buyback behaviour and the option funding hypothesis
     </a>
-    <div class="pub-authors">with Mark B. Shackleton</div>
-    <div class="pub-journal">
-      Journal of Banking &amp; Finance, 2020, 114:105800
-      <span class="journal-badge">JBF</span>
+    <div class="pub-meta">with Mark B. Shackleton · Journal of Banking &amp; Finance, 2020, 114:105800</div>
+  </div>
+
+  <div class="pub">
+    <a class="pub-title" href="https://dx.doi.org/10.1111/fima.12054" target="_blank">
+      The Option and Decision to Repurchase Stock
+    </a>
+    <div class="pub-meta">with Mark B. Shackleton, Nicholas Carline · Financial Management, 2014, 41(4), 833–855</div>
+  </div>
+
+  <h2 id="cv">CV</h2>
+
+  <div class="cv-row">
+    <div class="cv-years">2026–</div>
+    <div>
+      <div class="cv-role">Saara and Björn Wahlroos Foundation Fellow</div>
+      <div class="cv-org">Hanken School of Economics, Helsinki</div>
     </div>
   </div>
 
-  <p style="margin-top: 16px;">
-    <a href="/research" style="font-family: var(--font-mono); font-size: 12px; color: var(--accent);">
-      View all publications →
-    </a>
+  <div class="cv-row">
+    <div class="cv-years">2024–</div>
+    <div>
+      <div class="cv-role">Associate Researcher</div>
+      <div class="cv-org">Hanken School of Economics, Helsinki</div>
+    </div>
+  </div>
+
+  <div class="cv-row">
+    <div class="cv-years">2019–2024</div>
+    <div>
+      <div class="cv-role">Big Four Consulting</div>
+      <div class="cv-org">PwC · EY · KPMG</div>
+    </div>
+  </div>
+
+  <div class="cv-row">
+    <div class="cv-years">2014–2017</div>
+    <div>
+      <div class="cv-role">Assistant Professor</div>
+      <div class="cv-org">University of Exeter, UK</div>
+    </div>
+  </div>
+
+  <div class="cv-row">
+    <div class="cv-years">2009–2014</div>
+    <div>
+      <div class="cv-role">PhD, Accounting and Finance</div>
+      <div class="cv-org">Lancaster University Management School</div>
+    </div>
+  </div>
+
+  <p class="meta">Full CV available on request — <a href="mailto:rohit@sonika.me">email me</a>.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>
+    Department of Finance and Economics<br />
+    Hanken School of Economics<br />
+    Helsinki, Finland
   </p>
 
-</Base>
+  <footer>
+    rohit.sonika.me
+  </footer>
+
+  </main>
+
+</body>
+</html>

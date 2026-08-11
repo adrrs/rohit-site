@@ -1,0 +1,237 @@
+/* =============================================
+   rohit.sonika.me — single-page test style
+   Plain black on white. No sidebar, no accent colors.
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:      #ffffff;
+  --text:    #111111;
+  --muted:   #666666;
+  --border:  #dddddd;
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-sans:  'Instrument Sans', system-ui, sans-serif;
+  --font-mono:  'DM Mono', monospace;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+main {
+  min-width: 0;
+  max-width: 680px;
+}
+
+.side-nav {
+  position: sticky;
+  top: 80px;
+  flex: 0 0 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.side-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.side-nav a:hover {
+  color: var(--text);
+}
+
+.side-nav a:first-child {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+@media (max-width: 720px) {
+  body {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 48px;
+  }
+
+  .side-nav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+  }
+
+  .side-nav a:first-child {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 56px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+p {
+  margin-top: 12px;
+}
+
+.lede {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+.links {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* --- Research interests --- */
+
+.interest-list {
+  margin-top: 8px;
+}
+
+.interest-list li {
+  list-style: none;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.interest-list li:last-child {
+  border-bottom: none;
+}
+
+.interest-list strong {
+  font-weight: 600;
+}
+
+.interest-list span {
+  display: block;
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+/* --- Publications --- */
+
+.pub {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  display: block;
+}
+
+.pub-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* --- CV --- */
+
+.cv-row {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cv-row:last-child {
+  border-bottom: none;
+}
+
+.cv-years {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  flex: 0 0 90px;
+}
+
+.cv-role {
+  font-weight: 600;
+}
+
+.cv-org {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
