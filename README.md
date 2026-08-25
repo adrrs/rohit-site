@@ -4,48 +4,29 @@ Personal academic website built with [Astro](https://astro.build).
 
 ## Project structure
 
+The site is currently a single page.
+
 ```
 src/
-  content/
-    thoughts/        ← blog posts (one .md file per post)
-  layouts/
-    Base.astro       ← shared sidebar + head (edit this to change nav or metadata)
   pages/
-    index.astro      ← home page
-    about.astro      ← about page
-    research.astro   ← publications, working papers, grants
-    cv.astro         ← abbreviated CV
-    contact.astro    ← contact page
-    thoughts/
-      index.astro    ← list of all posts
-      [slug].astro   ← individual post template (do not edit)
-    rss.xml.js       ← RSS feed (auto-generated, do not edit)
+    index.astro       ← the entire site (nav, hero, research, publications, CV, contact)
   styles/
-    global.css       ← all site styles
-public/              ← static files (favicon, images, PDFs)
-astro.config.mjs     ← site URL and Astro settings
+    simple.css        ← all site styles
+netlify/
+  edge-functions/
+    bot-block.ts       ← blocks AI-scraper user agents, rate-limits by IP
+public/                ← static files (robots.txt, favicon, etc.)
+astro.config.mjs        ← site URL and Astro settings
+archive/                ← previous multi-page/blog design, kept for reference (not built)
 ```
 
-## Publishing a new post
+## Editing the site
 
-1. Create a new file in `src/content/thoughts/your-post-title.md`
-2. Add frontmatter at the top:
-
-```markdown
----
-title: "Your Post Title"
-date: 2025-06-01
-excerpt: "A one-sentence summary shown on the listing page."
----
-
-Your post content here. You can use **bold**, *italic*, and [links](https://example.com).
-```
-
-3. Save, then push to GitHub:
+Everything lives in `src/pages/index.astro` and `src/styles/simple.css`. Edit, then push to GitHub:
 
 ```bash
 git add .
-git commit -m "Add new post: your post title"
+git commit -m "Update site"
 git push
 ```
 

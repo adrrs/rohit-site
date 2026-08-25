@@ -1,6 +1,6 @@
 // astro.config.mjs
 // Main Astro configuration file.
-// IMPORTANT: the site URL must match your actual domain for RSS to work correctly.
+// IMPORTANT: the site URL must match your actual domain for canonical links to work correctly.
 
 import { defineConfig } from 'astro/config';
 
